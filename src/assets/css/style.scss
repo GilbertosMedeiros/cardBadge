@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    position: relative;
+    display: flex;
+}
+
+.container .card {
+    position: relative;
+    width: 360px;
+    height: 540px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 50px 18px 18px;
+}
+
+.container .card:nth-child(2) {
+    margin-left: 16px;
+}
+
+.container .card .slit {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80px;
+    height: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+}
+
+.container .card .card-front,
+.container .card .card-back {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.container .card .card-front:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2c3e50;
+    border-radius: 10px;
+    clip-path: circle(280px at 80% -20%);
+    transition: 0.5s ease-in-out;
+}
+
+.container .card .card-front .imgPersona {
+    position: relative;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 170px;
+    height: 170px;
+    border: 0.8px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    background: #2c3e50;
+    border-radius: 50%;
+}
+
+.container .card .card-front .imgPersona img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.container .card .card-front .contentBx {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 56px;
+    overflow: hidden;
+}
+
+.container .card .card-front .contentBx .persona {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card .card-front .contentBx .persona h2 {
+    font-weight: 900;
+    font-size: 1.8em;
+    letter-spacing: -1px;
+    color: #2c3e50;
+}
+
+.container .card .card-front .contentBx .persona span {
+    font-weight: 700;
+    color: #c0392b;
+    font-size: 1em;
+}
+
+.container .card .card-front .contentBx .personaInfo {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.container .card .card-front .contentBx .personaInfo p {
+    font-size: 1em;
+    letter-spacing: -1px;
+    color: #2c3e50;
+}
+
+.container .card .card-front .contentBx .personaInfo p span,
+.container .card .card-front .contentBx .companySite span {
+    font-weight: 700;
+    color: #c0392b;
+    font-size: 1em;
+}
+
+.container .card .card-front .contentBx .companySite p span {
+    margin-right: 10px;
+}
+
+.container .card .card-front .contentBx .companySite {
+    position: relative;
+    bottom: 6px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.container .card .card-back:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #2c3e50;
+    border-radius: 10px;
+    clip-path: circle(60px at 5% 5%);
+    transition: 0.5s ease-in-out;
+}
+
+.container .card .card-back:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2c3e50;
+    border-radius: 10px;
+    clip-path: circle(60px at 85% 100%);
+    transition: 0.5s ease-in-out;
+}
+
+.container .card .card-back .contentCompany {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.container .card .card-back .contentCompany h2 {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: 900;
+    line-height: 1.2em;
+    font-size: 2.2em;
+    color: #c0392b;
+}
+
+.container .card .card-back .contentCompany h5 {
+    position: relative;
+    font-weight: 600;
+    line-height: 0.75em;
+    font-size: 1em;
+    color: #c0392b;
+    margin-top: 176px;
+}
+
+.container .card .card-back .contentCompany ul {
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px
+}
+
+.container .card .card-back .contentCompany ul li {
+    list-style: none;
+    width: 100%;
+    font-weight: 300;
+    font-size: 0.8em;
+    line-height: 1.2em;
+    color: #2c3e50;
+    margin: 4px 0;
+}
+
+.container .card .card-back .contentCompany .divide {
+    position: relative;
+    width: 80%;
+    height: 3px;
+    background: #c0392b;
+    margin: 20px 0;
+}
+
+.container .card .card-back .contentCompany .contacts {
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.container .card .card-back .contentCompany .contacts .title {
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.container .card .card-back .contentCompany .contacts .title h5 {
+    position: absolute;
+    top: -5%;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.container .card .card-back .contentCompany .contacts p {
+    position: relative;
+    font-weight: 400;
+    line-height: 1em;
+    font-size: 0.8em;
+    color: #2c3e50;
+    margin-top: 4px;
+}
+
+.container .card .card-back .contentCompany .contacts p:nth-child(2) {
+    margin-top: 16px;
+}
+
+.container .card .card-back .contentCompany .contacts p span {
+    font-weight: 600;
+    color: #c0392b;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+    .container .card {
+        width: 340px;
+        height: 540px;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin-top: 16px;
+    }
+    .container .card:nth-child(2) {
+        margin: 16px 0;
+    }
+}
